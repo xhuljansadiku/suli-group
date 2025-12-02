@@ -1,0 +1,1468 @@
+  :root {
+    --sg-gold: #c7a96b;
+    --sg-dark: #111111;
+    --sg-dark-soft: #181818;
+    --sg-light: #f7f7f7;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--sg-dark);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, .section-title, .hero-title {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+
+  /* =========================
+    NAVBAR + BRAND
+    ========================= */
+
+  .navbar {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.9rem;
+  }
+
+  .brand-logo {
+    height: 64px;
+    width: auto;
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.4));
+    transition: transform 0.2s ease;
+  }
+
+  .brand-logo:hover {
+    transform: scale(1.06);
+  }
+
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+  }
+
+  .brand-line-top {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    color: #ffffff;
+  }
+
+  .brand-line-bottom {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    color: var(--sg-gold);
+  }
+
+  .nav-link {
+    color: #e5e5e5 !important;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+
+  .nav-link.active,
+  .nav-link:hover {
+    color: var(--sg-gold) !important;
+  }
+
+  .btn-gold {
+    background-color: var(--sg-gold);
+    border-color: var(--sg-gold);
+    color: #111111;
+    font-weight: 600;
+    border-radius: 999px;
+    padding-inline: 1.8rem;
+    padding-block: 0.7rem;
+  }
+
+  .btn-gold:hover {
+    background-color: #b39152;
+    border-color: #b39152;
+    color: #111111;
+  }
+
+  .btn-outline-gold {
+    border-radius: 999px;
+    border-color: var(--sg-gold);
+    color: var(--sg-gold);
+    font-weight: 500;
+  }
+
+  .btn-outline-gold:hover {
+    background: var(--sg-gold);
+    color: #111;
+  }
+
+  /* mobile tweaks navbar */
+  @media (max-width: 576px) {
+    .brand-logo {
+      height: 50px;
+    }
+
+    .brand-line-top {
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+    }
+
+    .brand-line-bottom {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+    }
+  }
+
+  @media (max-width: 991px) {
+    #mainNav {
+      text-align: right;
+    }
+
+    #mainNav .navbar-nav {
+      margin-left: auto !important;
+      align-items: flex-end !important;
+    }
+
+    #mainNav .nav-item {
+      width: 100%;
+    }
+
+    #mainNav .nav-link {
+      display: block;
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    .navbar-brand {
+      flex-grow: 1;
+    }
+
+    .navbar-toggler {
+      margin-left: auto !important;
+    }
+  }
+
+ /* =========================
+   HERO SECTION + REVEAL
+   ========================= */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 120px;
+  padding-bottom: 80px;
+  overflow: hidden;
+
+  /* sfond i thellë, teknik, me dritë nga e majta lart */
+  background:
+    radial-gradient(circle at 10% 0%, rgba(199, 169, 107, 0.22), transparent 55%),
+    radial-gradient(circle at 85% 100%, rgba(199, 169, 107, 0.12), transparent 60%),
+    linear-gradient(135deg, #11131a, #050608);
+}
+
+/* shtresë “blueprint / panel” mbi sfond */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background:
+    repeating-linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px,
+      transparent 26px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.035),
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px,
+      transparent 26px
+    );
+  opacity: 0.35;
+  transform: translate3d(0, 0, 0);
+  pointer-events: none;
+}
+
+/* formë diagonale metalike në sfond (si panel ndërtimi) */
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -25%;
+  top: -10%;
+  width: 60%;
+  height: 130%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.01)
+  );
+  border-radius: 64px;
+  opacity: 0.35;
+  transform: rotate(-10deg);
+  pointer-events: none;
+}
+
+/* reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal[data-reveal="left"] {
+  transform: translateX(-40px);
+}
+
+.reveal[data-reveal="right"] {
+  transform: translateX(40px);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+/* hero text */
+.hero-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.20em;
+  font-size: 0.75rem;
+  color: #bdbdbd;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+/* vijë e vogël teknike para eyebrow-it */
+.hero-eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(199, 169, 107, 0.0),
+    rgba(199, 169, 107, 0.9),
+    rgba(199, 169, 107, 0.0)
+  );
+}
+
+.hero-title {
+  font-size: clamp(2.6rem, 5vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.hero-highlight {
+  background: linear-gradient(120deg, var(--sg-gold), #f7e2a8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 18px rgba(199, 169, 107, 0.4);
+  animation: goldGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes goldGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(199, 169, 107, 0.25);
+  }
+  100% {
+    text-shadow: 0 0 22px rgba(199, 169, 107, 0.55);
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: #cfcfcf;
+  max-width: 38rem;
+  line-height: 1.55;
+}
+
+/* badge poshtë CTA */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  background: radial-gradient(circle at 0 0, rgba(199, 169, 107, 0.2), rgba(199, 169, 107, 0.06));
+  border: 1px solid rgba(199, 169, 107, 0.45);
+  font-size: 0.85rem;
+  color: #e4e4e4;
+  margin-top: 1rem;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.7);
+}
+
+.hero-badge i {
+  color: var(--sg-gold);
+  font-size: 1rem;
+}
+
+/* hero visual / card */
+
+.hero-visual {
+  position: relative;
+  z-index: 1;
+}
+
+/* sfond dritë prapa kartës */
+.hero-visual::before {
+  content: "";
+  position: absolute;
+  inset: -40px;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(199, 169, 107, 0.32), transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(199, 169, 107, 0.18), transparent 60%);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+/* overlay shumë i lehtë me foto reale nëse ekziston hero-project.jpg */
+.hero-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/assets/img/hero-project.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.10;
+  border-radius: 22px;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.hero-card {
+  position: relative;
+  background: radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.06), rgba(10, 10, 10, 0.98));
+  border-radius: 22px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
+
+/* vijë e artë e animuar sipër kartës */
+.hero-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(199, 169, 107, 0.95),
+    transparent
+  );
+  opacity: 0.9;
+}
+
+.hero-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at 0 0, rgba(199, 169, 107, 0.16), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.hero-card:hover {
+  transform: translate3d(0, -6px, 0) scale(1.01);
+  box-shadow: 0 32px 70px rgba(0, 0, 0, 0.95);
+  border-color: rgba(199, 169, 107, 0.6);
+}
+
+.hero-card:hover::after {
+  opacity: 1;
+}
+
+/* nëse ke ndryshuar h2 në klasë të veçantë përdor .hero-card-title – por edhe kjo punon */
+.hero-card h2 {
+  font-size: 1.25rem;
+  color: #e8e8e8;
+  line-height: 1.4;
+}
+
+/* metrics */
+
+.hero-metrics {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.6rem;
+}
+
+.metric {
+  flex: 1 1 120px;
+  text-align: left;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.metric:hover {
+  transform: translateY(-4px);
+}
+
+.metric-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--sg-gold);
+  line-height: 1;
+}
+
+.metric-label {
+  font-size: 0.85rem;
+  color: #9d9d9d;
+  margin-top: 0.25rem;
+}
+
+.hero-tags {
+  font-size: 0.8rem;
+  color: #b8b8b8;
+}
+
+.hero-tags .bi-dot {
+  color: var(--sg-gold);
+  font-size: 1.2rem;
+}
+
+/* hero responsive */
+@media (max-width: 991px) {
+  .hero {
+    text-align: center;
+    padding-top: 150px;
+  }
+
+  .hero-subtitle {
+    margin-inline: auto;
+  }
+
+  .hero-card {
+    margin-top: 2rem;
+  }
+
+  .hero-metrics {
+    justify-content: center;
+  }
+
+  .hero-tags {
+    justify-content: center;
+  }
+
+  .hero::after {
+    right: -45%;
+    width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding-top: 140px;
+    padding-bottom: 70px;
+  }
+
+  .hero-card {
+    padding: 1.6rem;
+  }
+
+  .metric-value {
+    font-size: 1.6rem;
+  }
+
+  .hero::before {
+    opacity: 0.25;
+  }
+}
+
+
+  /* =========================
+    SECTION BASE STYLES
+    ========================= */
+
+  .section-label {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.78rem;
+    color: #b0b0b0;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #ffffff;
+  }
+
+  .section-desc {
+    color: #bcbcbc;
+    max-width: 60rem;
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+/* =========================
+   DIENSTLEISTUNGEN SECTION
+   ========================= */
+
+#dienstleistungen {
+  position: relative;
+  overflow: hidden;
+  padding-top: 40px;
+}
+
+#dienstleistungen::before {
+  content: "";
+  position: absolute;
+  inset: -120px;
+  background:
+    radial-gradient(circle at 5% 0%, rgba(199,169,107,0.22), transparent 60%),
+    radial-gradient(circle at 95% 100%, rgba(199,169,107,0.12), transparent 70%);
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+/* ---------------------------------
+   SERVICE CARD
+-----------------------------------*/
+
+.surface.service-card {
+  position: relative;
+  background: linear-gradient(145deg, #181818, #0e0e0e);
+  border-radius: 20px;
+  padding: 1.9rem 1.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  height: 100%;
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease,
+    background 0.28s ease;
+  overflow: hidden;
+}
+
+/* dritë e artë në qoshe */
+.surface.service-card::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 85px;
+  height: 85px;
+  background: radial-gradient(circle at 100% 0%, rgba(199,169,107,0.6), transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.surface.service-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(199, 169, 107, 0.65);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.85);
+  background: linear-gradient(145deg, #1d1d1d, #101010);
+}
+
+.surface.service-card:hover::before {
+  opacity: 1;
+}
+
+/* ---------------------------------
+   ICON
+-----------------------------------*/
+
+.service-icon {
+  width: 105px;
+  height: 105px;
+  border-radius: 999px;
+  background: rgba(199, 169, 107, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.4rem auto;
+  transition: transform 0.3s ease, background 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* dritë subtile e rrotulluar */
+.service-icon::after {
+  content: "";
+  position: absolute;
+  width: 130%;
+  height: 130%;
+  background: radial-gradient(circle, rgba(255,255,255,0.05), transparent 70%);
+  top: -50%;
+  left: -50%;
+  transform: rotate(0deg);
+  opacity: 0.4;
+  animation: rotateLight 10s linear infinite;
+}
+
+@keyframes rotateLight {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.service-icon img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  animation: floatIcon 3s ease-in-out infinite;
+  transition: transform 0.25s ease;
+}
+
+@keyframes floatIcon {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.surface.service-card:hover .service-icon {
+  background: rgba(199, 169, 107, 0.22);
+  transform: translateY(-6px) scale(1.07);
+}
+
+.surface.service-card:hover .service-icon img {
+  transform: scale(1.1) rotate(3deg);
+}
+
+/* ---------------------------------
+   TEXT
+-----------------------------------*/
+
+.service-card h3 {
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.45rem;
+}
+
+.service-card p {
+  color: #c7c7c7;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin-bottom: 0.9rem;
+}
+
+.service-tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: #a1a1a1;
+  opacity: 0.9;
+}
+
+/* ---------------------------------
+   RESPONSIVE
+-----------------------------------*/
+
+@media (max-width: 991px) {
+  .surface.service-card {
+    padding: 1.6rem 1.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-icon {
+    width: 90px;
+    height: 90px;
+  }
+
+  .service-icon img {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+
+/* =========================
+   PROJEKTE SECTION
+   ========================= */
+
+#projekte {
+  position: relative;
+  overflow: hidden;
+  padding-top: 40px;
+}
+
+#projekte::before {
+  content: "";
+  position: absolute;
+  inset: -120px;
+  background:
+    radial-gradient(circle at 95% 0%, rgba(199,169,107,0.20), transparent 60%),
+    radial-gradient(circle at 10% 100%, rgba(199,169,107,0.10), transparent 70%);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Card bazë */
+
+.project-card {
+  position: relative;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #191919, #101010);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+/* dritë në qoshe */
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at 100% 0%, rgba(199,169,107,0.6), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  pointer-events: none;
+}
+
+/* vijë e hollë poshtë si accent */
+
+.project-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(199,169,107,0.0), rgba(199,169,107,0.9), rgba(199,169,107,0.0));
+  opacity: 0;
+  transition: opacity 0.25s ease-out;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(199,169,107,0.7);
+  box-shadow: 0 24px 55px rgba(0,0,0,0.85);
+  background: linear-gradient(145deg, #1e1e1e, #111111);
+}
+
+.project-card:hover::before,
+.project-card:hover::after {
+  opacity: 1;
+}
+
+/* variant me foto */
+
+.project-card.has-image {
+  padding: 0;
+}
+
+.project-card.has-image img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px 20px 0 0;
+  transition:
+    transform 0.6s ease,
+    filter 0.6s ease;
+}
+
+/* overlay i lehtë mbi foto */
+
+.project-card.has-image img::selection {
+  background: transparent;
+}
+
+.project-card.has-image .project-content {
+  padding: 1.3rem 1.5rem 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* zoom foto në hover */
+
+.project-card.has-image:hover img {
+  transform: scale(1.06);
+  filter: brightness(1.05);
+}
+
+/* Teksti brenda kartës */
+
+.project-tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--sg-gold);
+  margin-bottom: 0.45rem;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+.project-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin-bottom: 0.45rem;
+  color: #ffffff;
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  color: #cdcdcd;
+  line-height: 1.55;
+}
+
+/* Responsivitet */
+
+@media (max-width: 991px) {
+  .project-card.has-image img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .project-card.has-image img {
+    height: 170px;
+  }
+
+  .project-card.has-image .project-content {
+    padding: 1.1rem 1.3rem 1.3rem;
+  }
+}
+
+
+/* =========================
+   ÜBER UNS SECTION
+   ========================= */
+
+#ueber-uns {
+  position: relative;
+  overflow: hidden;
+  padding-top: 40px;
+}
+
+#ueber-uns::before {
+  content: "";
+  position: absolute;
+  inset: -140px;
+  background:
+    radial-gradient(circle at 20% 100%, rgba(199,169,107,0.22), transparent 60%),
+    radial-gradient(circle at 100% 20%, rgba(199,169,107,0.12), transparent 70%);
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+#ueber-uns .section-desc {
+  max-width: 40rem;
+}
+
+/* KUTIA E PROCESSEVE */
+
+#ueber-uns .surface {
+  background: linear-gradient(150deg, #1c1c1c, #0f0f0f);
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 2.2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 22px 45px rgba(0,0,0,0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Glow shumë elegant */
+
+#ueber-uns .surface::after {
+  content: "";
+  position: absolute;
+  right: -45px;
+  top: -45px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle at 100% 0%, rgba(199,169,107,0.45), transparent 70%);
+  opacity: 0.6;
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+
+/* PROCESSET INDIVIDUALE */
+
+.process-step {
+  display: flex;
+  gap: 1.1rem;
+  padding-block: 1.15rem;
+  position: relative;
+  transition: background 0.25s ease;
+}
+
+.process-step:not(:last-child) {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+
+/* NUMRAT E UNIFIKUAR */
+
+.step-index {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(199,169,107,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+  color: #f1f1f1;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  box-shadow: 0 0 10px rgba(0,0,0,0.65);
+  transition: 0.22s ease;
+}
+
+.process-step:hover .step-index {
+  background: var(--sg-gold);
+  color: #111;
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 0 14px rgba(199,169,107,0.55);
+  border-color: var(--sg-gold);
+}
+
+/* TEKSTET */
+
+.step-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.2rem;
+  transition: color 0.2s ease;
+}
+
+.process-step:hover .step-title {
+  color: var(--sg-gold);
+}
+
+.step-text {
+  font-size: 0.9rem;
+  color: #c7c7c7;
+  line-height: 1.55;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+  #ueber-uns .surface::before {
+    left: 22px;
+  }
+}
+
+@media (max-width: 576px) {
+  #ueber-uns .surface {
+    padding: 1.7rem 1.3rem;
+  }
+
+  #ueber-uns .surface::before {
+    top: 24px;
+    bottom: 24px;
+  }
+}
+
+ /* =========================
+   KUNDENFEEDBACK SECTION
+   ========================= */
+
+#kundenfeedback {
+  position: relative;
+  overflow: hidden;
+  padding-top: 40px;
+}
+
+#kundenfeedback::before {
+  content: "";
+  position: absolute;
+  inset: -140px;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(199,169,107,0.16), transparent 60%),
+    radial-gradient(circle at 90% 20%, rgba(199,169,107,0.10), transparent 70%);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+/* Karta e testimonial-it */
+
+.testimonial-card {
+  position: relative;
+  padding: 1.9rem 1.6rem 1.6rem;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+/* Glow i lehtë në cep */
+
+.testimonial-card::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 110px;
+  height: 110px;
+  background: radial-gradient(circle at 0 0, rgba(199,169,107,0.35), transparent 72%);
+  opacity: 0;
+  transition: opacity 0.25s ease-out;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  border-color: rgba(199,169,107,0.60);
+  background: #ffffff;
+}
+
+.testimonial-card:hover::before {
+  opacity: 1;
+}
+
+/* Ikona e thonjëzave */
+
+.testimonial-card > i.bi-quote {
+  font-size: 1.3rem;
+  color: var(--sg-gold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: rgba(199,169,107,0.12);
+}
+
+/* Teksti */
+
+.testimonial-text {
+  font-size: 0.92rem;
+  color: #444444;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.testimonial-name {
+  margin-top: 1.2rem;
+  font-size: 0.88rem;
+  color: #222222;
+  font-weight: 600;
+}
+
+/* Responsive padding */
+
+@media (max-width: 576px) {
+  .testimonial-card {
+    padding: 1.6rem 1.4rem 1.4rem;
+  }
+}
+
+  /* =========================
+    KONTAKT SECTION
+    ========================= */
+
+  #kontakt {
+    position: relative;
+    overflow: hidden;
+  }
+
+  #kontakt::before {
+    content: "";
+    position: absolute;
+    inset: -140px;
+    background: radial-gradient(circle at 50% 100%, rgba(199,169,107,0.20), transparent 60%);
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  .contact-card {
+    position: relative;
+    padding: 2rem;
+    background: linear-gradient(145deg, #181818, #101010);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.7);
+    overflow: hidden;
+  }
+
+  .contact-card::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 130px;
+    height: 130px;
+    background: radial-gradient(circle at 100% 0%, rgba(199,169,107,0.45), transparent 70%);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .contact-line {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    color: #e0e0e0;
+  }
+
+  .contact-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    background: rgba(199,169,107,0.14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--sg-gold);
+    flex-shrink: 0;
+  }
+
+  .contact-label {
+    font-size: 0.8rem;
+    color: #9f9f9f;
+  }
+
+  .social-links .btn {
+    font-size: 0.82rem;
+  }
+
+  .contact-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  .contact-intro {
+    color: #c2c2c2;
+    font-size: 0.95rem;
+  }
+
+  .contact-note {
+    font-size: 0.8rem;
+    color: #9c9c9c;
+  }
+
+  .form-control,
+  .form-select {
+    background-color: #141414;
+    border-color: #2b2b2b;
+    color: #ffffff;
+    border-radius: 999px;
+    padding-block: 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  textarea.form-control {
+    border-radius: 16px;
+    min-height: 130px;
+  }
+
+  .form-control:focus,
+  .form-select:focus {
+    background-color: #111111;
+    border-color: var(--sg-gold);
+    box-shadow: 0 0 0 0.1rem rgba(199, 169, 107, 0.4);
+  }
+
+  .form-control::placeholder {
+    color: #777;
+  }
+
+  @media (max-width: 576px) {
+    .contact-card {
+      padding: 1.6rem 1.3rem;
+    }
+  }
+
+  /* =========================
+    FOOTER
+    ========================= */
+
+  .site-footer {
+    background: #0b0b0b;
+    color: #b8b8b8;
+    font-size: 0.9rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .site-footer::before {
+    content: "";
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 520px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(199,169,107,0.28), transparent 65%);
+    opacity: 0.35;
+    pointer-events: none;
+  }
+
+  .footer-logo {
+    height: 52px;
+    width: auto;
+    filter: drop-shadow(0 0 4px rgba(0,0,0,0.6));
+  }
+
+  .footer-brand-text {
+    line-height: 1.2;
+  }
+
+  .footer-brand-top {
+    font-size: 0.85rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .footer-brand-bottom {
+    font-size: 0.8rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--sg-gold);
+    font-weight: 500;
+  }
+
+  .footer-text {
+    margin: 0;
+    max-width: 22rem;
+    font-size: 0.85rem;
+    color: #c0c0c0;
+  }
+
+  .footer-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #f0f0f0;
+    margin-bottom: 0.8rem;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.35rem;
+  }
+
+  .footer-links a {
+    color: #c7c7c7;
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.25s ease, opacity 0.25s ease;
+  }
+
+  .footer-links a:hover {
+    color: var(--sg-gold);
+    opacity: 0.95;
+  }
+
+  .footer-info {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .footer-info li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+    font-size: 0.88rem;
+  }
+
+  .footer-info i {
+    color: var(--sg-gold);
+    font-size: 1rem;
+  }
+
+  .footer-info a {
+    color: #c7c7c7;
+    text-decoration: none;
+    transition: color 0.25s ease, opacity 0.25s ease;
+  }
+
+  .footer-info a:hover {
+    color: var(--sg-gold);
+    opacity: 0.95;
+  }
+
+  .footer-legal-links {
+    font-size: 0.82rem;
+    color: #a5a5a5;
+  }
+
+  .footer-legal-links a {
+    color: #c7c7c7;
+    text-decoration: none;
+    margin-inline: 0.25rem;
+    transition: color 0.25s ease, opacity 0.25s ease;
+  }
+
+  .footer-legal-links a:hover {
+    color: var(--sg-gold);
+    opacity: 0.95;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-block: 14px;
+    background: #050505;
+    font-size: 0.8rem;
+  }
+
+  .footer-bottom span {
+    color: #8f8f8f;
+  }
+
+  .footer-top-link {
+    color: #c7c7c7;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.25s ease, transform 0.25s ease;
+  }
+
+  .footer-top-link i {
+    font-size: 1.1rem;
+  }
+
+  .footer-top-link:hover {
+    color: var(--sg-gold);
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 576px) {
+    .site-footer .container.d-flex {
+      flex-direction: column;
+      align-items: flex-start !important;
+      gap: 8px;
+    }
+
+    .footer-bottom {
+      text-align: left;
+    }
+  }
+
+
+  /* =========================
+    LEGAL PAGES (Impressum / Datenschutz)
+    ========================= */
+
+  .legal-hero {
+    padding-top: 140px;
+    padding-bottom: 60px;
+    background: radial-gradient(circle at 30% 10%, #1c1c1c 0%, #0d0d0d 60%);
+  }
+
+  .legal-hero .section-title {
+    margin-bottom: 0.6rem;
+  }
+
+  .legal-hero .section-desc {
+    max-width: 46rem;
+  }
+
+  .legal-section {
+    padding-bottom: 80px;
+  }
+
+  .legal-box {
+    background: linear-gradient(145deg, #181818, #101010);
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 2rem 1.8rem;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.7);
+  }
+
+  .legal-heading {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-top: 1.4rem;
+    margin-bottom: 0.4rem;
+    color: #ffffff;
+  }
+
+  .legal-heading:first-of-type {
+    margin-top: 0;
+  }
+
+  .legal-text {
+    font-size: 0.9rem;
+    color: #d0d0d0;
+    line-height: 1.65;
+  }
+
+  .legal-list {
+    font-size: 0.9rem;
+    color: #d0d0d0;
+    padding-left: 1.1rem;
+  }
+
+  .legal-list li {
+    margin-bottom: 0.2rem;
+  }
+
+  @media (max-width: 576px) {
+    .legal-box {
+      padding: 1.6rem 1.3rem;
+    }
+  }
+
+
+
