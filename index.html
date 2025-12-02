@@ -25,7 +25,7 @@
   <div class="container">
 
     <a class="navbar-brand d-flex align-items-center gap-3" href="#start">
-      <img src="/assets/img/logo.png" class="brand-logo" alt="SULI Group Logo">
+      <img src="./assets/img/logo.png" class="brand-logo" alt="SULI Group Logo">
 
       <div class="brand-text">
         <span class="brand-line-top">SULI GROUP</span>
@@ -160,7 +160,7 @@
       <div class="col-md-6 col-xl-3 reveal" data-reveal="up">
         <div class="surface service-card">
           <div class="service-icon">
-            <img src="/assets/img/trockenbau.png" width="80px" height="80px" alt="">
+            <img src="./assets/img/trockenbau.png" width="80px" height="80px" alt="">
 
           </div>
           <h3>Professioneller Trockenbau</h3>
@@ -176,7 +176,7 @@
       <div class="col-md-6 col-xl-3 reveal" data-reveal="up">
         <div class="surface service-card">
           <div class="service-icon">
-                        <img src="/assets/img/decken.png" width="50px" alt="">
+                        <img src="./assets/img/decken.png" width="50px" alt="">
           </div>
           <h3>Decken &amp; Wandgestaltung</h3>
           <p>
@@ -191,7 +191,7 @@
       <div class="col-md-6 col-xl-3 reveal" data-reveal="up">
         <div class="surface service-card">
           <div class="service-icon">
-            <img src="/assets/img/renovation.png" width="50px" alt="">
+            <img src="./assets/img/renovation.png" width="50px" alt="">
           </div>
           <h3>Bodenverlegung &amp; sanierung</h3>
           <p>
@@ -206,7 +206,7 @@
       <div class="col-md-6 col-xl-3 reveal" data-reveal="up">
         <div class="surface service-card">
           <div class="service-icon">
-            <img src="/assets/img/insulation.png" width="50px" alt="">
+            <img src="./assets/img/insulation.png" width="50px" alt="">
           </div>
           <h3>Dachausbau &amp; Isolierung</h3>
           <p>
@@ -242,7 +242,7 @@
       <!-- Projekt 1 -->
       <div class="col-md-6 col-lg-4 reveal" data-reveal="up">
         <div class="project-card has-image">
-          <img src="/assets/img/projekt-wohnung.webp" alt="Modernisierung einer Stadtwohnung">
+          <img src="./assets/img/projekt-wohnung.webp" alt="Modernisierung einer Stadtwohnung">
           <div class="project-content">
             <div class="project-tag">Wohnungsausbau</div>
             <div class="project-title">Modernisierung einer Stadtwohnung</div>
@@ -256,7 +256,7 @@
       <!-- Projekt 2 -->
       <div class="col-md-6 col-lg-4 reveal" data-reveal="up">
         <div class="project-card has-image">
-          <img src="/assets/img/projekt-buero.webp" alt="Büro- und Praxisräume">
+          <img src="./assets/img/projekt-buero.webp" alt="Büro- und Praxisräume">
           <div class="project-content">
             <div class="project-tag">Gewerbefläche</div>
             <div class="project-title">Büro und Praxisräume</div>
@@ -270,7 +270,7 @@
       <!-- Projekt 3 -->
       <div class="col-md-6 col-lg-4 reveal" data-reveal="up">
         <div class="project-card has-image">
-          <img src="/assets/img/projekt-dachgeschoss.webp" alt="Dachgeschoss mit Isolierung">
+          <img src="./assets/img/projekt-dachgeschoss.webp" alt="Dachgeschoss mit Isolierung">
           <div class="project-content">
             <div class="project-tag">Dachausbau</div>
             <div class="project-title">Dachgeschoss mit Isolierung</div>
@@ -522,7 +522,7 @@
       <!-- Logo + përshkrim -->
       <div class="col-md-4">
         <div class="d-flex align-items-center gap-3 mb-3">
-          <img src="/assets/img/logo.png" class="footer-logo" alt="SULI Group Logo">
+          <img src="./assets/img/logo.png" class="footer-logo" alt="SULI Group Logo">
           <div class="footer-brand-text">
             <div class="footer-brand-top">SULI GROUP</div>
             <div class="footer-brand-bottom">TROCKENBAU</div>
@@ -574,15 +574,21 @@
     </div>
   </div>
 
-  <div class="footer-bottom">
-    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
-      <span>© 2035 SULI Group Trockenbau – Alle Rechte vorbehalten</span>
-      <a href="#start" class="footer-top-link">
-        <i class="bi bi-arrow-up-short"></i> Nach oben
-      </a>
-    </div>
+<div class="footer-bottom">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+    <span>© <span id="year"></span> SULI Group Trockenbau – Alle Rechte vorbehalten</span>
+    <a href="#start" class="footer-top-link">
+      <i class="bi bi-arrow-up-short"></i> Nach oben
+    </a>
   </div>
+</div>
+
 </footer>
+
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 
   <script>
