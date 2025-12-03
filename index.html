@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SULI Group Trockenbau</title>
 
+  <!-- SEO -->
+  <meta name="description" content="SULI Group Trockenbau in Fürth – Trockenbau, Decken- und Wandgestaltung, Bodenverlegung und Dachausbau für Wohn- und Gewerbeobjekte.">
+
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
@@ -21,7 +24,7 @@
 
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg fixed-top border-bottom border-secondary-subtle">
-  <div class="container">
+  <div class="container d-flex align-items-center justify-content-between">
 
     <a class="navbar-brand d-flex align-items-center gap-3" href="#start">
       <img src="./assets/img/logo.png" class="brand-logo" alt="SULI Group Logo">
@@ -32,14 +35,21 @@
       </div>
     </a>
 
-    <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+    <button
+      class="navbar-toggler text-white border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNav"
+      aria-controls="mainNav"
+      aria-expanded="false"
+      aria-label="Menü öffnen">
       <i class="bi bi-list" style="font-size: 1.4rem;"></i>
     </button>
 
-    <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+    <div class="collapse navbar-collapse justify-content-lg-end mt-3 mt-lg-0" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-center align-items-lg-center gap-2 gap-lg-3 text-center text-lg-start">
         <li class="nav-item">
-          <a class="nav-link" href="#dienstleistungen">Dienste</a>
+          <a class="nav-link" href="#dienstleistungen">Dienstleistungen</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#projekte">Projekte</a>
@@ -50,8 +60,8 @@
         <li class="nav-item">
           <a class="nav-link" href="#kontakt">Kontakt</a>
         </li>
-        <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-          <a href="#kontakt" class="btn btn-gold btn-sm">Projekt anfragen</a>
+        <li class="nav-item mt-2 mt-lg-0">
+          <a href="#kontakt" class="btn btn-gold btn-sm w-100 w-lg-auto">Projekt anfragen</a>
         </li>
       </ul>
     </div>
@@ -59,494 +69,518 @@
   </div>
 </nav>
 
-<!-- HERO / START -->
-<header id="start" class="hero">
-  <div class="container">
-    <div class="row align-items-center g-4">
-      
-      <!-- KOLUMNA E MAJTË – TEKSTI -->
-      <div class="col-lg-6 reveal text-center text-lg-start" data-reveal="left">
-        <p class="hero-eyebrow mb-2">SULI GROUP · TROCKENBAU</p>
-        <h1 class="hero-title mb-3">
-          Wir bauen <span class="hero-highlight">Ihren Traum</span>.<br />
-          Professioneller Trockenbau für Ihr Projekt.
-        </h1>
-        <p class="hero-subtitle mb-4 mx-auto mx-lg-0">
-          Decken, Wände, Böden und Dachausbau SULI Group Trockenbau begleitet Sie von der Planung bis zum präzisen Finish.
-        </p>
+<main>
+  <!-- HERO / START -->
+  <header id="start" class="hero">
+    <div class="container">
+      <div class="row align-items-center g-4">
 
-        <div class="d-flex flex-wrap gap-3 align-items-center justify-content-center justify-content-lg-start">
-          <a href="#kontakt" class="btn btn-gold">Kostenlose Anfrage senden</a>
-          <a href="tel:+491728994352" class="btn btn-outline-gold">
-            <i class="bi bi-telephone me-1"></i>
-            Jetzt anrufen
-          </a>
-        </div>
-
-        <div class="mt-4 hero-badge mx-auto mx-lg-0">
-          <i class="bi bi-check2-circle"></i>
-          <span>Wir sind da, wenn Qualität und Tempo stimmen müssen.</span>
-        </div>
-      </div>
-
-      <!-- KOLUMNA E DJATHTË – KARTA / VIZUALI -->
-      <div class="col-lg-6 reveal mt-4 mt-lg-0 d-flex justify-content-center justify-content-lg-end" data-reveal="right">
-        <div class="hero-visual w-100" style="max-width: 480px;">
-          <div class="hero-card">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <span style="font-size: 0.8rem; color:#9f9f9f;">SULI GROUP Trockenbau</span>
-              <span style="font-size: 0.75rem; color: #9f9f9f;">
-                Wohn &amp; Gewerbeobjekte
-              </span>
-            </div>
-
-            <h2 style="font-size: 1.3rem; margin-bottom: 1.1rem;">
-              Etabliertes Trockenbau Unternehmen mit Fokus auf Qualität, Genauigkeit und kurze Ausführungszeiten.
-            </h2>
-
-            <div class="hero-metrics">
-              <div class="metric">
-                <div class="metric-value">11+</div>
-                <div class="metric-label">Jahre Erfahrung</div>
-              </div>
-              <div class="metric">
-                <div class="metric-value">Team</div>
-                <div class="metric-label">Qualifizierte Fachkräfte</div>
-              </div>
-              <div class="metric">
-                <div class="metric-value">Finish</div>
-                <div class="metric-label">Präzise Ausführung</div>
-              </div>
-              <div class="metric">
-                <div class="metric-value">Service</div>
-                <div class="metric-label">Zuverlässig &amp; professionell</div>
-              </div>
-            </div>
-
-            <hr class="border-secondary-subtle my-3">
-
-            <div class="d-flex flex-wrap gap-3 hero-tags">
-              <div><i class="bi bi-dot"></i> Trockenbau</div>
-              <div><i class="bi bi-dot"></i> Decken &amp; Wandgestaltung</div>
-              <div><i class="bi bi-dot"></i> Bodenverlegung &amp; sanierung</div>
-              <div><i class="bi bi-dot"></i> Dachausbau &amp; Isolierung</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</header>
-
-<!-- DIENSTLEISTUNGEN -->
-<section id="dienstleistungen" class="reveal" data-reveal="up">
-  <div class="container mt-5 mb-5">
-    <div class="row align-items-end mb-4">
-      <div class="col-lg-7 text-center text-lg-start">
-        <p class="section-label">Unsere Dienstleistungen</p>
-        <h2 class="section-title">Was SULI Group für Sie leistet</h2>
-        <p class="section-desc mx-auto mx-lg-0">
-          Wir bieten professionellen Trockenbau, passgenaue Decken und Wandgestaltung, moderne Bodenlösungen sowie
-          Dachausbau mit Isolierung alles aus einer Hand.
-        </p>
-      </div>
-    </div>
-
-    <div class="row g-3">
-      <div class="col-md-6 col-xl-3 reveal" data-reveal="up">
-        <div class="surface service-card text-center text-md-start">
-          <div class="service-icon mx-auto">
-            <img src="./assets/img/trockenbau.png" width="80" height="80" alt="">
-          </div>
-          <h3>Professioneller Trockenbau</h3>
-          <p>
-            Planung und Umsetzung von Trockenbau Systemen für Wohn und Gewerbeflächen  strukturiert, sauber und präzise.
+        <!-- KOLUMNA E MAJTË – TEKSTI -->
+        <div class="col-lg-6 reveal text-center text-lg-start d-flex flex-column align-items-center align-items-lg-start" data-reveal="left">
+          <p class="hero-eyebrow mb-2">SULI GROUP · TROCKENBAU</p>
+          <h1 class="hero-title mb-3">
+            Wir bauen <span class="hero-highlight">Ihren Traum</span>.<br />
+            Professioneller Trockenbau für Ihr Projekt.
+          </h1>
+          <p class="hero-subtitle mb-4 mx-auto mx-lg-0">
+            Decken, Wände, Böden und Dachausbau – SULI Group Trockenbau begleitet Sie von der Planung bis zum präzisen Finish.
           </p>
-          <div class="service-tag">
-            Wände · Decken · Ausbau
-          </div>
-        </div>
-      </div>
 
-      <div class="col-md-6 col-xl-3 reveal" data-reveal="up">
-        <div class="surface service-card text-center text-md-start">
-          <div class="service-icon mx-auto">
-            <img src="./assets/img/decken.png" width="50" alt="">
-          </div>
-          <h3>Decken &amp; Wandgestaltung</h3>
-          <p>
-            Abgehängte Decken, Vorsatzschalen und Trennwände  funktional und optisch auf Ihr Projekt abgestimmt.
-          </p>
-          <div class="service-tag">
-            Gestaltung &amp; Struktur
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-xl-3 reveal" data-reveal="up">
-        <div class="surface service-card text-center text-md-start">
-          <div class="service-icon mx-auto">
-            <img src="./assets/img/renovation.png" width="50" alt="">
-          </div>
-          <h3>Bodenverlegung &amp; sanierung</h3>
-          <p>
-            Aufbau und Sanierung von Böden als Grundlage für den weiteren Ausbau solide vorbereitet für den nächsten Schritt.
-          </p>
-          <div class="service-tag">
-            Untergründe &amp; Sanierung
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-xl-3 reveal" data-reveal="up">
-        <div class="surface service-card text-center text-md-start">
-          <div class="service-icon mx-auto">
-            <img src="./assets/img/insulation.png" width="50" alt="">
-          </div>
-          <h3>Dachausbau &amp; Isolierung</h3>
-          <p>
-            Ausbau von Dachgeschossen inklusive Isolierung  mehr nutzbare Fläche und ein angenehmes Raumklima.
-          </p>
-          <div class="service-tag">
-            Dachgeschoss · Dämmung
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- PROJEKTE -->
-<section id="projekte" class="reveal" data-reveal="up">
-  <div class="container mt-5 mb-5">
-
-    <div class="row align-items-end mb-3 mb-md-4">
-      <div class="col-lg-8 text-center text-lg-start">
-        <p class="section-label">Vorherige Projekte</p>
-        <h2 class="section-title">Ausgewählte Arbeiten</h2>
-        <p class="section-desc mx-auto mx-lg-0">
-          Hier sehen Sie eine Auswahl unserer Trockenbau-Projekte – vom Wohnungsausbau
-          über Büros bis hin zu komplett ausgebauten Dachgeschossen.
-        </p>
-      </div>
-    </div>
-
-    <!-- FILTER-LEISTE -->
-    <div class="row mb-4">
-      <div class="col-12 d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start">
-        <button class="project-filter-btn active" type="button" data-filter="all">
-          Alle Projekte
-        </button>
-        <button class="project-filter-btn" type="button" data-filter="wohnung">
-          Wohnungen &amp; Häuser
-        </button>
-        <button class="project-filter-btn" type="button" data-filter="gewerbe">
-          Gewerbeflächen
-        </button>
-        <button class="project-filter-btn" type="button" data-filter="dach">
-          Dachausbau
-        </button>
-      </div>
-    </div>
-
-    <!-- GRID MIT PROJEKTEN -->
-    <div class="row g-3 g-md-4 project-grid">
-
-      <!-- Projekt: Wohnung -->
-      <div class="col-md-6 col-lg-4 reveal project-item text-center text-md-start" data-category="wohnung">
-        <article class="project-card has-image">
-          <div class="project-image-wrapper">
-            <img src="./assets/img/projekt-wohnung.webp" alt="Modernisierung einer Stadtwohnung">
-            <div class="project-image-overlay">
-              <span>Innenausbau · Decken · Dämmung</span>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-tag">Wohnungsausbau</div>
-            <h3 class="project-title">Modernisierung einer Stadtwohnung</h3>
-            <p class="project-desc mb-0">
-              Trockenbauwände, abgehängte Decken und Dämmung für klare Raumstrukturen
-              und verbesserten Wohnkomfort.
-            </p>
-          </div>
-        </article>
-      </div>
-
-      <!-- Projekt: Büro / Praxis (Gewerbe) -->
-      <div class="col-md-6 col-lg-4 reveal project-item text-center text-md-start" data-category="gewerbe">
-        <article class="project-card has-image">
-          <div class="project-image-wrapper">
-            <img src="./assets/img/projekt-buero.webp" alt="Büro- und Praxisräume">
-            <div class="project-image-overlay">
-              <span>Akustik · Trennwände · Gewerbe</span>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-tag">Gewerbefläche</div>
-            <h3 class="project-title">Büro und Praxisräume</h3>
-            <p class="project-desc mb-0">
-              Flexible Trockenbau-Trennwände und Akustiklösungen für eine effiziente
-              Nutzung von Büro- und Praxisbereichen.
-            </p>
-          </div>
-        </article>
-      </div>
-
-      <!-- Projekt: Dachgeschoss -->
-      <div class="col-md-6 col-lg-4 reveal project-item text-center text-md-start" data-category="dach">
-        <article class="project-card has-image">
-          <div class="project-image-wrapper">
-            <img src="./assets/img/projekt-dachgeschoss.webp" alt="Dachgeschoss mit Isolierung">
-            <div class="project-image-overlay">
-              <span>Dachausbau · Dämmung · Ausbau</span>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-tag">Dachausbau</div>
-            <h3 class="project-title">Dachgeschoss mit Isolierung</h3>
-            <p class="project-desc mb-0">
-              Kompletter Ausbau des Dachgeschosses inklusive Isolierung und Trockenbau
-              für neue, voll nutzbare Wohnfläche.
-            </p>
-          </div>
-        </article>
-      </div>
-
-    </div>
-
-    <!-- CTA POSHTË -->
-    <div class="mt-4 text-center text-md-end reveal" data-reveal="up">
-      <button class="btn btn-outline-gold btn-sm" type="button">
-        Alle Projekte ansehen
-      </button>
-    </div>
-
-  </div>
-</section>
-
-<!-- ÜBER UNS -->
-<section id="ueber-uns">
-  <div class="container mt-5 mb-5">
-    <div class="row g-4">
-      <div class="col-lg-6 reveal text-center text-lg-start" data-reveal="left">
-        <p class="section-label">Über uns</p>
-        <h2 class="section-title">SULI GROUP Trockenbau</h2>
-        <p class="section-desc mb-3 mx-auto mx-lg-0">
-          SULI Group Trockenbau ist ein etabliertes Unternehmen mit über elf Jahren Erfahrung im Trockenbau. <br>
-          Unsere Leistungen sind darauf ausgerichtet, hochwertige Ergebnisse mit hoher Genauigkeit in kurzer Zeit zu liefern.
-        </p>
-        <p class="section-desc mx-auto mx-lg-0">
-          Unser Team reagiert schnell auf Anfragen, arbeitet strukturiert und legt großen Wert auf saubere Baustellen. <br>
-          So sorgen wir dafür, dass Ihr Projekt reibungslos läuft  vom ersten Kontakt bis zur Übergabe.
-        </p>
-      </div>
-
-      <div class="col-lg-6 reveal mt-4 mt-lg-0" data-reveal="right">
-        <div class="surface p-3 p-lg-4">
-
-          <div class="process-step no-index">
-            <div>
-              <div class="step-title">Erfahrung im Markt</div>
-              <p class="step-text mb-0">
-                Über elf Jahre im Trockenbau mit vielen realisierten Projekten in Wohn und Gewerbebereich.
-              </p>
-            </div>
-          </div>
-
-          <div class="process-step no-index">
-            <div>
-              <div class="step-title">Qualifiziertes Team</div>
-              <p class="step-text mb-0">
-                Ein eingespieltes Team, das mit Know-how, Genauigkeit und Tempo arbeitet.
-              </p>
-            </div>
-          </div>
-
-          <div class="process-step no-index">
-            <div>
-              <div class="step-title">Präzises Finish</div>
-              <p class="step-text mb-0">
-                Sauber verspachtelte Flächen, klare Kanten und eine perfekte Basis für alle weiteren Gewerke.
-              </p>
-            </div>
-          </div>
-
-          <div class="process-step no-index">
-            <div>
-              <div class="step-title">Zuverlässig & professionell</div>
-              <p class="step-text mb-0">
-                Verlässliche Absprachen, klare Angebote und eine professionelle Betreuung Ihres Projekts.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- KUNDENFEEDBACK -->
-<section id="kundenfeedback" class="reveal" data-reveal="up">
-  <div class="container mt-5 mb-5">
-    <div class="row mb-4">
-      <div class="col-lg-7 text-center text-lg-start">
-        <p class="section-label">Kundenfeedback</p>
-        <h2 class="section-title">Stimmen unserer Kunden</h2>
-        <p class="section-desc mx-auto mx-lg-0">
-          Auf der aktuellen Seite stehen Platzhalter Bewertungen hier kannst du echte Kundenstimmen eintragen, sobald Rückmeldungen vorliegen.
-        </p>
-      </div>
-    </div>
-
-    <div class="row g-3">
-      <div class="col-md-4 reveal" data-reveal="up">
-        <div class="testimonial-card text-center">
-          <i class="bi bi-quote"></i>
-          <p class="testimonial-text">
-            „Hier ist der ideale Platz für eine Kundenmeinung, die zeigt, wie zuverlässig und sauber SULI Group arbeitet.“
-          </p>
-          <div class="testimonial-name">Die Mustermanns</div>
-        </div>
-      </div>
-
-      <div class="col-md-4 reveal" data-reveal="up">
-        <div class="testimonial-card text-center">
-          <i class="bi bi-quote"></i>
-          <p class="testimonial-text">
-            „Kurze Wege, klare Absprachen und ein starkes Ergebnis – so werden Besucher von Ihrem Angebot überzeugt.“
-          </p>
-          <div class="testimonial-name">Max &amp; Marie</div>
-        </div>
-      </div>
-
-      <div class="col-md-4 reveal" data-reveal="up">
-        <div class="testimonial-card text-center">
-          <i class="bi bi-quote"></i>
-          <p class="testimonial-text">
-            „Eine Kundenbewertung, die Ihre Professionalität und den reibungslosen Ablauf auf der Baustelle unterstreicht.“
-          </p>
-          <div class="testimonial-name">Eva Bauer</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- KONTAKT / ANFRAGE -->
-<section id="kontakt" class="reveal" data-reveal="up">
-  <div class="container mt-5 mb-5">
-    <div class="row g-4">
-      
-      <div class="col-lg-5 reveal text-center text-lg-start" data-reveal="left">
-        <p class="section-label">Kontakt</p>
-        <h2 class="section-title">Lassen Sie uns über Ihr Projekt sprechen</h2>
-        <p class="section-desc mb-4 mx-auto mx-lg-0">
-          Sie können uns direkt anrufen, eine E-Mail schreiben oder das Formular nutzen. <br> Wir melden uns so schnell wie möglich.
-        </p>
-
-        <div class="surface contact-card mb-3 mb-lg-0">
-          <div class="contact-line justify-content-center justify-content-lg-start">
-            <div class="contact-icon">
-              <i class="bi bi-telephone"></i>
-            </div>
-            <div>
-              <div class="contact-label">Telefon</div>
-              <strong>+49 172 899 4352</strong>
-            </div>
-          </div>
-
-          <div class="contact-line justify-content-center justify-content-lg-start">
-            <div class="contact-icon">
-              <i class="bi bi-envelope"></i>
-            </div>
-            <div>
-              <div class="contact-label">E-Mail</div>
-              <strong>suli.group.1@gmail.com</strong>
-            </div>
-          </div>
-
-          <div class="contact-line justify-content-center justify-content-lg-start">
-            <div class="contact-icon">
-              <i class="bi bi-geo-alt"></i>
-            </div>
-            <div>
-              <div class="contact-label">Adresse</div>
-              <strong>Flößaustraße 60, 90763 Fürth</strong>
-            </div>
-          </div>
-
-          <hr class="border-secondary mt-3 mb-2">
-
-          <div class="d-flex flex-wrap gap-2 social-links justify-content-center justify-content-lg-start">
-            <a href="https://facebook.com" class="btn btn-outline-gold btn-sm">
-              <i class="bi bi-facebook me-1"></i> Facebook
-            </a>
-            <a href="https://instagram.com" class="btn btn-outline-gold btn-sm">
-              <i class="bi bi-instagram me-1"></i> Instagram
-            </a>
-            <a href="https://yelp.com" class="btn btn-outline-gold btn-sm">
-              <i class="bi bi-yelp me-1"></i> Yelp
+          <div class="d-flex flex-wrap gap-3 align-items-center justify-content-center justify-content-lg-start">
+            <a href="#kontakt" class="btn btn-gold">Kostenlose Anfrage senden</a>
+            <a href="tel:+491728994352" class="btn btn-outline-gold">
+              <i class="bi bi-telephone me-1"></i>
+              Jetzt anrufen
             </a>
           </div>
+
+          <div class="mt-4 hero-badge mx-auto mx-lg-0">
+            <i class="bi bi-check2-circle"></i>
+            <span>Wir sind da, wenn Qualität und Tempo stimmen müssen.</span>
+          </div>
+        </div>
+
+        <!-- KOLUMNA E DJATHTË – KARTA / VIZUALI -->
+        <div class="col-lg-6 reveal mt-4 mt-lg-0 d-flex justify-content-center justify-content-lg-end" data-reveal="right">
+          <div class="hero-visual w-100 d-flex justify-content-center justify-content-lg-end" style="max-width: 480px;">
+            <div class="hero-card w-100">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span style="font-size: 0.8rem; color:#9f9f9f;">SULI GROUP Trockenbau</span>
+                <span style="font-size: 0.75rem; color: #9f9f9f;">
+                  Wohn- &amp; Gewerbeobjekte
+                </span>
+              </div>
+
+              <h2 style="font-size: 1.3rem; margin-bottom: 1.1rem;">
+                Etabliertes Trockenbauunternehmen mit Fokus auf Qualität, Genauigkeit und kurze Ausführungszeiten.
+              </h2>
+
+         <div class="hero-metrics">
+  <div class="metric">
+    <div class="metric-value">11+</div>
+    <div class="metric-label">Jahre Erfahrung</div>
+  </div>
+
+  <div class="metric">
+    <div class="metric-value">Team</div>
+    <div class="metric-label">Qualifizierte Fachkräfte</div>
+  </div>
+
+  <div class="metric">
+    <div class="metric-value">Finish</div>
+    <div class="metric-label">Präzise Ausführung</div>
+  </div>
+
+  <div class="metric">
+    <div class="metric-value">Service</div>
+    <div class="metric-label">Zuverlässig &amp; professionell</div>
+  </div>
+
+  <div class="metric">
+    <div class="metric-value">24h</div>
+    <div class="metric-label">Reaktion auf Anfragen</div>
+  </div>
+
+  <div class="metric">
+    <div class="metric-value">Projekt</div>
+    <div class="metric-label">Lösungen aus einer Hand</div>
+  </div>
+</div>
+
+              <hr class="border-secondary-subtle my-3">
+
+              <div class="d-flex flex-wrap gap-3 hero-tags">
+                <div><i class="bi bi-dot"></i> Trockenbau</div>
+                <div><i class="bi bi-dot"></i> Decken &amp; Wandgestaltung</div>
+                <div><i class="bi bi-dot"></i> Bodenverlegung &amp; Sanierung</div>
+                <div><i class="bi bi-dot"></i> Dachausbau &amp; Isolierung</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- DIENSTLEISTUNGEN -->
+  <section id="dienstleistungen" class="reveal" data-reveal="up">
+    <div class="container mt-5 mb-5">
+      <div class="row align-items-end mb-4">
+        <div class="col-lg-7 text-center text-lg-start mx-auto mx-lg-0">
+          <p class="section-label">Unsere Dienstleistungen</p>
+          <h2 class="section-title">Was SULI Group für Sie leistet</h2>
+          <p class="section-desc mx-auto mx-lg-0">
+            Wir bieten professionellen Trockenbau, passgenaue Decken und Wandgestaltung, moderne Bodenlösungen sowie
+            Dachausbau mit Isolierung – alles aus einer Hand.
+          </p>
         </div>
       </div>
 
-      <div class="col-lg-7 reveal mt-4 mt-lg-0" data-reveal="right">
-        <div class="surface contact-card h-100">
-          <h3 class="contact-title mb-3 text-center text-lg-start">Nachricht senden</h3>
-          <p class="contact-intro mb-4 text-center text-lg-start">
-            Schreiben Sie uns kurz, was Sie planen. <br> Wir melden uns mit Rückfragen oder einem Terminvorschlag.
-          </p>
-
-          <form>
-            <div class="row g-3 mb-1">
-              <div class="col-md-6">
-                <label class="form-label small text-secondary" for="name">Name</label>
-                <input type="text" id="name" class="form-control" placeholder="Ihr Name">
-              </div>
-              <div class="col-md-6">
-                <label class="form-label small text-secondary" for="email">E-Mail</label>
-                <input type="email" id="email" class="form-control" placeholder="Ihre E-Mail-Adresse">
-              </div>
-              <div class="col-md-6">
-                <label class="form-label small text-secondary" for="phone">Telefon</label>
-                <input type="tel" id="phone" class="form-control" placeholder="Für Rückfragen">
-              </div>
-              <div class="col-md-6">
-                <label class="form-label small text-secondary" for="type">Projektart</label>
-                <select id="type" class="form-select">
-                  <option>Wohnung / Haus</option>
-                  <option>Gewerbefläche</option>
-                  <option>Sanierung / Umbau</option>
-                  <option>Sonstiges</option>
-                </select>
-              </div>
+      <div class="row g-3">
+        <div class="col-md-6 col-xl-3 reveal" data-reveal="up">
+          <div class="surface service-card text-center text-md-start h-100 d-flex flex-column align-items-center align-items-md-start">
+            <div class="service-icon mx-auto">
+              <img src="./assets/img/trockenbau.png" width="80" height="80" alt="Icon für professionellen Trockenbau">
             </div>
-
-            <div class="mb-3">
-              <label class="form-label small text-secondary" for="message">Nachricht</label>
-              <textarea id="message" class="form-control" placeholder="Was darf umgesetzt werden?"></textarea>
+            <h3>Professioneller Trockenbau</h3>
+            <p>
+              Planung und Umsetzung von Trockenbausystemen für Wohn und Gewerbeflächen strukturiert, sauber und präzise.
+            </p>
+            <div class="service-tag">
+              Wände · Decken · Ausbau
             </div>
-
-            <div class="d-flex flex-wrap gap-3 align-items-center mt-2 justify-content-center justify-content-lg-start">
-              <button type="submit" class="btn btn-gold">
-                Nachricht absenden
-              </button>
-              <span class="contact-note text-center text-lg-start">
-                Nach dem Absenden kann hier eine kurze Bestätigungsmeldung erscheinen.
-              </span>
-            </div>
-          </form>
+          </div>
         </div>
+
+        <div class="col-md-6 col-xl-3 reveal" data-reveal="up">
+          <div class="surface service-card text-center text-md-start h-100 d-flex flex-column align-items-center align-items-md-start">
+            <div class="service-icon mx-auto">
+              <img src="./assets/img/decken.png" width="50" alt="Icon für Decken- und Wandgestaltung">
+            </div>
+            <h3>Decken &amp; Wandgestaltung</h3>
+            <p>
+              Abgehängte Decken, Vorsatzschalen und Trennwände – funktional und optisch auf Ihr Projekt abgestimmt.
+            </p>
+            <div class="service-tag">
+              Gestaltung &amp; Struktur
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-3 reveal" data-reveal="up">
+          <div class="surface service-card text-center text-md-start h-100 d-flex flex-column align-items-center align-items-md-start">
+            <div class="service-icon mx-auto">
+              <img src="./assets/img/renovation.png" width="50" alt="Icon für Bodenverlegung und Sanierung">
+            </div>
+            <h3>Bodenverlegung &amp; Sanierung</h3>
+            <p>
+              Aufbau und Sanierung von Böden als Grundlage für den weiteren Ausbau – solide vorbereitet für den nächsten Schritt.
+            </p>
+            <div class="service-tag">
+              Untergründe &amp; Sanierung
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-3 reveal" data-reveal="up">
+          <div class="surface service-card text-center text-md-start h-100 d-flex flex-column align-items-center align-items-md-start">
+            <div class="service-icon mx-auto">
+              <img src="./assets/img/insulation.png" width="50" alt="Icon für Dachausbau und Isolierung">
+            </div>
+            <h3>Dachausbau &amp; Isolierung</h3>
+            <p>
+              Ausbau von Dachgeschossen inklusive Isolierung – mehr nutzbare Fläche und ein angenehmes Raumklima.
+            </p>
+            <div class="service-tag">
+              Dachgeschoss · Dämmung
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJEKTE -->
+  <section id="projekte" class="reveal" data-reveal="up">
+    <div class="container mt-5 mb-5">
+
+      <div class="row align-items-end mb-3 mb-md-4">
+        <div class="col-lg-8 text-center text-lg-start mx-auto mx-lg-0">
+          <p class="section-label">Vorherige Projekte</p>
+          <h2 class="section-title">Ausgewählte Arbeiten</h2>
+          <p class="section-desc mx-auto mx-lg-0">
+            Hier sehen Sie eine Auswahl unserer Trockenbau-Projekte – vom Wohnungsausbau
+            über Büros bis hin zu komplett ausgebauten Dachgeschossen.
+          </p>
+        </div>
+      </div>
+
+      <!-- FILTER-LEISTE -->
+      <div class="row mb-4">
+        <div class="col-12 d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start">
+          <button class="project-filter-btn active" type="button" data-filter="all">
+            Alle Projekte
+          </button>
+          <button class="project-filter-btn" type="button" data-filter="wohnung">
+            Wohnungen &amp; Häuser
+          </button>
+          <button class="project-filter-btn" type="button" data-filter="gewerbe">
+            Gewerbeflächen
+          </button>
+          <button class="project-filter-btn" type="button" data-filter="dach">
+            Dachausbau
+          </button>
+        </div>
+      </div>
+
+      <!-- GRID MIT PROJEKTEN -->
+      <div class="row g-3 g-md-4 project-grid">
+
+        <!-- Projekt: Wohnung -->
+        <div class="col-md-6 col-lg-4 reveal project-item text-center text-md-start" data-category="wohnung">
+          <article class="project-card has-image h-100 d-flex flex-column">
+            <div class="project-image-wrapper">
+              <img src="./assets/img/projekt-wohnung.webp" alt="Modernisierung einer Stadtwohnung – Trockenbau, Decken und Dämmung" loading="lazy">
+              <div class="project-image-overlay">
+                <span>Innenausbau · Decken · Dämmung</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tag">Wohnungsausbau</div>
+              <h3 class="project-title">Modernisierung einer Stadtwohnung</h3>
+              <p class="project-desc mb-0">
+                Trockenbauwände, abgehängte Decken und Dämmung für klare Raumstrukturen
+                und verbesserten Wohnkomfort.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Projekt: Büro / Praxis (Gewerbe) -->
+        <div class="col-md-6 col-lg-4 reveal project-item text-center text-md-start" data-category="gewerbe">
+          <article class="project-card has-image h-100 d-flex flex-column">
+            <div class="project-image-wrapper">
+              <img src="./assets/img/projekt-buero.webp" alt="Ausbau von Büro- und Praxisräumen mit Trockenbau-Trennwänden und Akustiklösungen" loading="lazy">
+              <div class="project-image-overlay">
+                <span>Akustik · Trennwände · Gewerbe</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tag">Gewerbefläche</div>
+              <h3 class="project-title">Büro und Praxisräume</h3>
+              <p class="project-desc mb-0">
+                Flexible Trockenbau-Trennwände und Akustiklösungen für eine effiziente
+                Nutzung von Büro- und Praxisbereichen.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Projekt: Dachgeschoss -->
+        <div class="col-md-6 col-lg-4 reveal project-item text-center text-md-start" data-category="dach">
+          <article class="project-card has-image h-100 d-flex flex-column">
+            <div class="project-image-wrapper">
+              <img src="./assets/img/projekt-dachgeschoss.webp" alt="Ausgebautes Dachgeschoss mit Trockenbau und Isolierung" loading="lazy">
+              <div class="project-image-overlay">
+                <span>Dachausbau · Dämmung · Ausbau</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tag">Dachausbau</div>
+              <h3 class="project-title">Dachgeschoss mit Isolierung</h3>
+              <p class="project-desc mb-0">
+                Kompletter Ausbau des Dachgeschosses inklusive Isolierung und Trockenbau
+                für neue, voll nutzbare Wohnfläche.
+              </p>
+            </div>
+          </article>
+        </div>
+
+      </div>
+
+      <!-- CTA POSHTË -->
+      <div class="mt-4 text-center text-md-end reveal" data-reveal="up">
+        <button class="btn btn-outline-gold btn-sm" type="button">
+          Alle Projekte ansehen
+        </button>
       </div>
 
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- ÜBER UNS -->
+  <section id="ueber-uns">
+    <div class="container mt-5 mb-5">
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-6 reveal text-center text-lg-start d-flex flex-column align-items-center align-items-lg-start" data-reveal="left">
+          <p class="section-label">Über uns</p>
+          <h2 class="section-title">SULI GROUP Trockenbau</h2>
+          <p class="section-desc mb-3 mx-auto mx-lg-0">
+            SULI Group Trockenbau ist ein etabliertes Unternehmen mit über elf Jahren Erfahrung im Trockenbau. <br>
+            Unsere Leistungen sind darauf ausgerichtet, hochwertige Ergebnisse mit hoher Genauigkeit in kurzer Zeit zu liefern.
+          </p>
+          <p class="section-desc mx-auto mx-lg-0">
+            Unser Team reagiert schnell auf Anfragen, arbeitet strukturiert und legt großen Wert auf saubere Baustellen. <br>
+            So sorgen wir dafür, dass Ihr Projekt reibungslos läuft – vom ersten Kontakt bis zur Übergabe.
+          </p>
+        </div>
+
+        <div class="col-lg-6 reveal mt-4 mt-lg-0" data-reveal="right">
+          <div class="surface p-3 p-lg-4 h-100">
+            <div class="process-step no-index">
+              <div>
+                <div class="step-title">Erfahrung im Markt</div>
+                <p class="step-text mb-0">
+                  Über elf Jahre im Trockenbau mit vielen realisierten Projekten im Wohn- und Gewerbebereich.
+                </p>
+              </div>
+            </div>
+
+            <div class="process-step no-index">
+              <div>
+                <div class="step-title">Qualifiziertes Team</div>
+                <p class="step-text mb-0">
+                  Ein eingespieltes Team, das mit Know-how, Genauigkeit und Tempo arbeitet.
+                </p>
+              </div>
+            </div>
+
+            <div class="process-step no-index">
+              <div>
+                <div class="step-title">Präzises Finish</div>
+                <p class="step-text mb-0">
+                  Sauber verspachtelte Flächen, klare Kanten und eine perfekte Basis für alle weiteren Gewerke.
+                </p>
+              </div>
+            </div>
+
+            <div class="process-step no-index">
+              <div>
+                <div class="step-title">Zuverlässig &amp; professionell</div>
+                <p class="step-text mb-0">
+                  Verlässliche Absprachen, klare Angebote und eine professionelle Betreuung Ihres Projekts.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- KUNDENFEEDBACK -->
+  <section id="kundenfeedback" class="reveal" data-reveal="up">
+    <div class="container mt-5 mb-5">
+      <div class="row mb-4">
+        <div class="col-lg-7 text-center text-lg-start mx-auto mx-lg-0">
+          <p class="section-label">Kundenfeedback</p>
+          <h2 class="section-title">Stimmen unserer Kunden</h2>
+          <p class="section-desc mx-auto mx-lg-0">
+            Auf der aktuellen Seite stehen Platzhalter-Bewertungen – hier können Sie echte Kundenstimmen eintragen, sobald Rückmeldungen vorliegen.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-4 reveal" data-reveal="up">
+          <div class="testimonial-card text-center h-100 d-flex flex-column justify-content-between">
+            <div>
+              <i class="bi bi-quote"></i>
+              <p class="testimonial-text mt-3">
+                „Hier ist der ideale Platz für eine Kundenmeinung, die zeigt, wie zuverlässig und sauber SULI Group arbeitet.“
+              </p>
+            </div>
+            <div class="testimonial-name mt-3">Die Mustermanns</div>
+          </div>
+        </div>
+
+        <div class="col-md-4 reveal" data-reveal="up">
+          <div class="testimonial-card text-center h-100 d-flex flex-column justify-content-between">
+            <div>
+              <i class="bi bi-quote"></i>
+              <p class="testimonial-text mt-3">
+                „Kurze Wege, klare Absprachen und ein starkes Ergebnis – so werden Besucher von Ihrem Angebot überzeugt.“
+              </p>
+            </div>
+            <div class="testimonial-name mt-3">Max &amp; Marie</div>
+          </div>
+        </div>
+
+        <div class="col-md-4 reveal" data-reveal="up">
+          <div class="testimonial-card text-center h-100 d-flex flex-column justify-content-between">
+            <div>
+              <i class="bi bi-quote"></i>
+              <p class="testimonial-text mt-3">
+                „Eine Kundenbewertung, die Ihre Professionalität und den reibungslosen Ablauf auf der Baustelle unterstreicht.“
+              </p>
+            </div>
+            <div class="testimonial-name mt-3">Eva Bauer</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT / ANFRAGE -->
+  <section id="kontakt" class="reveal" data-reveal="up">
+    <div class="container mt-5 mb-5">
+      <div class="row g-4">
+
+        <div class="col-lg-5 reveal text-center text-lg-start d-flex flex-column align-items-center align-items-lg-start" data-reveal="left">
+          <p class="section-label">Kontakt</p>
+          <h2 class="section-title">Lassen Sie uns über Ihr Projekt sprechen</h2>
+          <p class="section-desc mb-4 mx-auto mx-lg-0">
+            Sie können uns direkt anrufen, eine E-Mail schreiben oder das Formular nutzen. <br> Wir melden uns so schnell wie möglich.
+          </p>
+
+          <div class="surface contact-card mb-3 mb-lg-0 w-100">
+            <div class="contact-line justify-content-center justify-content-lg-start">
+              <div class="contact-icon">
+                <i class="bi bi-telephone"></i>
+              </div>
+              <div>
+                <div class="contact-label">Telefon</div>
+                <strong>
+                  <a href="tel:+491728994352" class="text-decoration-none text-reset">+49 172 899 4352</a>
+                </strong>
+              </div>
+            </div>
+
+            <div class="contact-line justify-content-center justify-content-lg-start">
+              <div class="contact-icon">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div>
+                <div class="contact-label">E-Mail</div>
+                <strong>
+                  <a href="mailto:suli.group.1@gmail.com" class="text-decoration-none text-reset">suli.group.1@gmail.com</a>
+                </strong>
+              </div>
+            </div>
+
+            <div class="contact-line justify-content-center justify-content-lg-start">
+              <div class="contact-icon">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div>
+                <div class="contact-label">Adresse</div>
+                <strong>Flößaustraße 60, 90763 Fürth</strong>
+              </div>
+            </div>
+
+            <hr class="border-secondary mt-3 mb-2">
+
+            <div class="d-flex flex-wrap gap-2 social-links justify-content-center justify-content-lg-start">
+              <a href="https://facebook.com" class="btn btn-outline-gold btn-sm">
+                <i class="bi bi-facebook me-1"></i> Facebook
+              </a>
+              <a href="https://instagram.com" class="btn btn-outline-gold btn-sm">
+                <i class="bi bi-instagram me-1"></i> Instagram
+              </a>
+              <a href="https://yelp.com" class="btn btn-outline-gold btn-sm">
+                <i class="bi bi-yelp me-1"></i> Yelp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7 reveal mt-4 mt-lg-0" data-reveal="right">
+          <div class="surface contact-card h-100 w-100">
+            <h3 class="contact-title mb-3 text-center text-lg-start">Nachricht senden</h3>
+            <p class="contact-intro mb-4 text-center text-lg-start">
+              Schreiben Sie uns kurz, was Sie planen. <br> Wir melden uns mit Rückfragen oder einem Terminvorschlag.
+            </p>
+
+            <form>
+              <div class="row g-3 mb-1">
+                <div class="col-md-6">
+                  <label class="form-label small text-secondary" for="name">Name</label>
+                  <input type="text" id="name" class="form-control" placeholder="Ihr Name">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small text-secondary" for="email">E-Mail</label>
+                  <input type="email" id="email" class="form-control" placeholder="Ihre E-Mail-Adresse">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small text-secondary" for="phone">Telefon</label>
+                  <input type="tel" id="phone" class="form-control" placeholder="Für Rückfragen">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small text-secondary" for="type">Projektart</label>
+                  <select id="type" class="form-select">
+                    <option>Wohnung / Haus</option>
+                    <option>Gewerbefläche</option>
+                    <option>Sanierung / Umbau</option>
+                    <option>Sonstiges</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label small text-secondary" for="message">Nachricht</label>
+                <textarea id="message" class="form-control" placeholder="Was darf umgesetzt werden?"></textarea>
+              </div>
+
+              <div class="d-flex flex-wrap gap-3 align-items-center mt-2 justify-content-center justify-content-lg-start">
+                <button type="submit" class="btn btn-gold">
+                  Nachricht absenden
+                </button>
+                <span class="contact-note text-center text-lg-start">
+                  Nach dem Absenden kann hier eine kurze Bestätigungsmeldung erscheinen.
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
 
 <!-- FOOTER -->
 <footer class="site-footer">
@@ -564,14 +598,14 @@
         </div>
         <p class="footer-text">
           SULI Group Trockenbau steht für saubere Ausführung, klare Absprachen
-          und zuverlässige Zusammenarbeit im Wohn und Gewerbebereich.
+          und zuverlässige Zusammenarbeit im Wohn- und Gewerbebereich.
         </p>
       </div>
 
       <!-- Navigim -->
-      <div class="col-md-4">
+      <div class="col-md-4 d-flex flex-column align-items-center align-items-md-start">
         <h4 class="footer-title">Navigation</h4>
-        <ul class="footer-links">
+        <ul class="footer-links text-center text-md-start">
           <li><a href="#start">Startseite</a></li>
           <li><a href="#dienstleistungen">Dienstleistungen</a></li>
           <li><a href="#projekte">Projekte</a></li>
@@ -581,7 +615,7 @@
       </div>
 
       <!-- Kontakt & Rechtliches -->
-      <div class="col-md-4">
+      <div class="col-md-4 d-flex flex-column align-items-center align-items-md-start">
         <h4 class="footer-title">Kontakt</h4>
         <ul class="footer-info">
           <li>
@@ -621,10 +655,9 @@
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
-</script>
 
-<script>
   document.addEventListener("DOMContentLoaded", function () {
+    // REVEAL ANIMATION
     const revealElements = document.querySelectorAll(".reveal");
 
     const observer = new IntersectionObserver(
@@ -632,7 +665,7 @@
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
-            observer.unobserve(entry.target); // animim vetëm një herë
+            observer.unobserve(entry.target);
           }
         });
       },
@@ -642,11 +675,8 @@
     );
 
     revealElements.forEach((el) => observer.observe(el));
-  });
-</script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
+    // PROJECT FILTER
     const filterButtons = document.querySelectorAll(".project-filter-btn");
     const projectItems = document.querySelectorAll(".project-item");
 
@@ -654,11 +684,9 @@
       btn.addEventListener("click", () => {
         const filter = btn.getAttribute("data-filter");
 
-        // active state
         filterButtons.forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
 
-        // filter items
         projectItems.forEach((item) => {
           const category = item.getAttribute("data-category");
 
