@@ -227,61 +227,108 @@
 <section id="projekte" class="reveal" data-reveal="up">
   <div class="container mt-5 mb-5">
 
-    <div class="row align-items-end mb-4 reveal" data-reveal="up">
+    <div class="row align-items-end mb-3 mb-md-4">
       <div class="col-lg-8">
         <p class="section-label">Vorherige Projekte</p>
         <h2 class="section-title">Ausgewählte Arbeiten</h2>
         <p class="section-desc">
-          Auf der aktuellen Seite sind verschiedene Projektbilder hinterlegt hier kannst du reale Referenzen mit
-          Fotos und kurzen Beschreibungen ergänzen, sobald du sie bereit hast.
+          Hier sehen Sie eine Auswahl unserer Trockenbau-Projekte – vom Wohnungsausbau
+          über Büros bis hin zu komplett ausgebauten Dachgeschossen.
         </p>
       </div>
     </div>
 
-    <div class="row g-3">
-      <!-- Projekt 1 -->
-      <div class="col-md-6 col-lg-4 reveal" data-reveal="up">
-        <div class="project-card has-image">
-          <img src="./assets/img/projekt-wohnung.webp" alt="Modernisierung einer Stadtwohnung">
-          <div class="project-content">
-            <div class="project-tag">Wohnungsausbau</div>
-            <div class="project-title">Modernisierung einer Stadtwohnung</div>
-            <p class="project-desc mb-0">
-              Trockenbauwände, abgehängte Decken und Dämmung für mehr Komfort und klare Raumstrukturen.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Projekt 2 -->
-      <div class="col-md-6 col-lg-4 reveal" data-reveal="up">
-        <div class="project-card has-image">
-          <img src="./assets/img/projekt-buero.webp" alt="Büro- und Praxisräume">
-          <div class="project-content">
-            <div class="project-tag">Gewerbefläche</div>
-            <div class="project-title">Büro und Praxisräume</div>
-            <p class="project-desc mb-0">
-              Flexible Trennwände und Akustiklösungen für eine optimale Nutzung von Büro und Praxisbereichen.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Projekt 3 -->
-      <div class="col-md-6 col-lg-4 reveal" data-reveal="up">
-        <div class="project-card has-image">
-          <img src="./assets/img/projekt-dachgeschoss.webp" alt="Dachgeschoss mit Isolierung">
-          <div class="project-content">
-            <div class="project-tag">Dachausbau</div>
-            <div class="project-title">Dachgeschoss mit Isolierung</div>
-            <p class="project-desc mb-0">
-              Dachausbau inklusive Isolierung und Trockenbau Schaffung neuer Wohnfläche unter dem Dach.
-            </p>
-          </div>
-        </div>
+    <!-- FILTER-LEISTE -->
+    <div class="row mb-4">
+      <div class="col-12 d-flex flex-wrap gap-2">
+        <button class="project-filter-btn active" type="button" data-filter="all">
+          Alle Projekte
+        </button>
+        <button class="project-filter-btn" type="button" data-filter="wohnung">
+          Wohnungen &amp; Häuser
+        </button>
+        <button class="project-filter-btn" type="button" data-filter="gewerbe">
+          Gewerbeflächen
+        </button>
+        <button class="project-filter-btn" type="button" data-filter="dach">
+          Dachausbau
+        </button>
       </div>
     </div>
 
+    <!-- GRID MIT PROJEKTEN -->
+    <div class="row g-3 g-md-4 project-grid">
+
+      <!-- Projekt: Wohnung -->
+      <div class="col-md-6 col-lg-4 reveal project-item" data-category="wohnung">
+        <article class="project-card has-image">
+          <div class="project-image-wrapper">
+            <img src="./assets/img/projekt-wohnung.webp" alt="Modernisierung einer Stadtwohnung">
+            <div class="project-image-overlay">
+              <span>Innenausbau · Decken · Dämmung</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tag">Wohnungsausbau</div>
+            <h3 class="project-title">Modernisierung einer Stadtwohnung</h3>
+            <p class="project-desc mb-0">
+              Trockenbauwände, abgehängte Decken und Dämmung für klare Raumstrukturen
+              und verbesserten Wohnkomfort.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Projekt: Büro / Praxis (Gewerbe) -->
+      <div class="col-md-6 col-lg-4 reveal project-item" data-category="gewerbe">
+        <article class="project-card has-image">
+          <div class="project-image-wrapper">
+            <img src="./assets/img/projekt-buero.webp" alt="Büro- und Praxisräume">
+            <div class="project-image-overlay">
+              <span>Akustik · Trennwände · Gewerbe</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tag">Gewerbefläche</div>
+            <h3 class="project-title">Büro und Praxisräume</h3>
+            <p class="project-desc mb-0">
+              Flexible Trockenbau-Trennwände und Akustiklösungen für eine effiziente
+              Nutzung von Büro- und Praxisbereichen.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Projekt: Dachgeschoss -->
+      <div class="col-md-6 col-lg-4 reveal project-item" data-category="dach">
+        <article class="project-card has-image">
+          <div class="project-image-wrapper">
+            <img src="./assets/img/projekt-dachgeschoss.webp" alt="Dachgeschoss mit Isolierung">
+            <div class="project-image-overlay">
+              <span>Dachausbau · Dämmung · Ausbau</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tag">Dachausbau</div>
+            <h3 class="project-title">Dachgeschoss mit Isolierung</h3>
+            <p class="project-desc mb-0">
+              Kompletter Ausbau des Dachgeschosses inklusive Isolierung und Trockenbau
+              für neue, voll nutzbare Wohnfläche.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Shembull shtesë (nëse do më shumë) -->
+      <!--
+      <div class="col-md-6 col-lg-4 reveal project-item" data-category="wohnung">
+        ...
+      </div>
+      -->
+
+    </div>
+
+    <!-- CTA POSHTË -->
     <div class="mt-4 text-end reveal" data-reveal="up">
       <button class="btn btn-outline-gold btn-sm" type="button">
         Alle Projekte ansehen
@@ -290,6 +337,7 @@
 
   </div>
 </section>
+
 
 
   <!-- ÜBER UNS -->
@@ -612,6 +660,35 @@
     revealElements.forEach((el) => observer.observe(el));
   });
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".project-filter-btn");
+    const projectItems = document.querySelectorAll(".project-item");
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filter = btn.getAttribute("data-filter");
+
+        // active state
+        filterButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        // filter items
+        projectItems.forEach((item) => {
+          const category = item.getAttribute("data-category");
+
+          if (filter === "all" || category === filter) {
+            item.classList.remove("d-none");
+          } else {
+            item.classList.add("d-none");
+          }
+        });
+      });
+    });
+  });
+</script>
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
