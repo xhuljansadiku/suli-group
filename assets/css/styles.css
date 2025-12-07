@@ -961,6 +961,57 @@ h1, h2, h3, .section-title, .hero-title {
   }
 }
 
+/* Kleine Fakten-Leiste "Über uns" */
+.facts-strip {
+  margin-top: 1.5rem;
+  padding: 1.3rem 1.4rem;
+  border-radius: 18px;
+  background: radial-gradient(circle at 0 0, rgba(199,169,107,0.18), transparent 65%);
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.75);
+}
+
+.fact-item {
+  padding: 0.6rem 0.4rem;
+  border-left: 1px solid rgba(255,255,255,0.07);
+}
+
+.fact-item:first-child {
+  border-left: none;
+}
+
+.fact-title {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.fact-text {
+  font-size: 0.87rem;
+  color: #c7c7c7;
+}
+
+/* Mobile tweaks */
+@media (max-width: 767.98px) {
+  .facts-strip {
+    padding: 1.1rem 1rem;
+  }
+
+  .fact-item {
+    border-left: none;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 0.8rem;
+    margin-top: 0.4rem;
+  }
+
+  .fact-item:first-child {
+    border-top: none;
+    margin-top: 0;
+  }
+}
+
+
 /* =========================
   KUNDENFEEDBACK SECTION
   ========================= */
@@ -1170,6 +1221,87 @@ textarea.form-control {
     padding: 1.6rem 1.3rem;
   }
 }
+
+/* =============  CONTACT FORM – UNIFIKIM STILI  ============= */
+
+.contact-card form .form-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  text-transform: none;
+}
+
+/* Input + Select */
+.contact-card form .form-control,
+.contact-card form .form-select {
+  background-color: #141414;
+  border-color: #2b2b2b;
+  color: #ffffff;
+  border-radius: 999px;
+  padding-block: 0.7rem;
+  padding-inline: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Textarea – pak më këndore, por i njëjti stil */
+.contact-card form textarea.form-control {
+  border-radius: 16px;
+  min-height: 130px;
+  resize: vertical;
+  color: #ffffff;
+}
+
+/* Fokus për të gjitha fushat */
+.contact-card form .form-control:focus,
+.contact-card form .form-select:focus,
+.contact-card form textarea.form-control:focus {
+  background-color: #111111;
+  border-color: var(--sg-gold);
+  color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(199, 169, 107, 0.35);
+}
+
+/* Placeholder i unifikuar */
+.contact-card form .form-control::placeholder,
+.contact-card form textarea.form-control::placeholder {
+  color: #777777;
+}
+
+/* Checkbox Datenschutzerklärung */
+.contact-card .form-check-input {
+  background-color: #111111;
+  border-color: #555555;
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.15rem;
+  cursor: pointer;
+}
+
+.contact-card .form-check-input:focus {
+  box-shadow: 0 0 0 2px rgba(199, 169, 107, 0.35);
+  border-color: var(--sg-gold);
+}
+
+.contact-card .form-check-input:checked {
+  background-color: var(--sg-gold);
+  border-color: var(--sg-gold);
+}
+
+/* Teksti i checkbox-it */
+.contact-card .form-check-label {
+  font-size: 0.8rem;
+  color: #b0b0b0;
+  line-height: 1.5;
+}
+
+.contact-card .form-check-label a {
+  color: var(--sg-gold);
+}
+
+.contact-card .form-check-label a:hover {
+  text-decoration: underline;
+}
+
 
 /* =========================
   FOOTER
@@ -1449,3 +1581,5 @@ textarea.form-control {
   opacity: 1;
   visibility: visible;
 }
+
+

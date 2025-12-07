@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projekte · SULI Group Trockenbau</title>
+
+  <meta name="description" content="Ausgewählte Trockenbau-Projekte von SULI Group: Wohnungen, Gewerbeflächen und Dachausbauten mit präziser Ausführung.">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top border-bottom border-secondary-subtle">
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <a class="navbar-brand d-flex align-items-center gap-3" href="index.html#start">
+      <img src="./assets/img/logo.png" class="brand-logo" alt="SULI Group Logo">
+      <div class="brand-text">
+        <span class="brand-line-top">SULI GROUP</span>
+        <span class="brand-line-bottom">TROCKENBAU</span>
+      </div>
+    </a>
+
+    <button
+      class="navbar-toggler text-white border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNav"
+      aria-controls="mainNav"
+      aria-expanded="false"
+      aria-label="Menü öffnen">
+      <i class="bi bi-list" style="font-size: 1.4rem;"></i>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-lg-end mt-3 mt-lg-0" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-center gap-2 gap-lg-3 text-center text-lg-start">
+        <li class="nav-item">
+          <a class="nav-link" href="dienstleistungen.html">Dienstleistungen</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="projekte.html">Projekte</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ueber-uns.html">Über uns</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="kontakt.html">Kontakt</a>
+        </li>
+        <li class="nav-item mt-2 mt-lg-0">
+          <a href="kontakt.html" class="btn btn-gold btn-sm w-100 w-lg-auto">Projekt anfragen</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<main>
+  <!-- HERO PROJEKTE -->
+  <header class="legal-hero">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8 text-center text-lg-center mx-auto">
+          <p class="section-label">Projekte</p>
+          <h1 class="section-title">Ausgewählte Arbeiten im Überblick</h1>
+          <p class="section-desc">
+            Einen Teil unserer Trockenbau Projekte finden Sie hier Wohnungen, Büros, Praxisräume 
+            und Dachgeschosse, die wir in strukturierte, nutzbare Flächen verwandelt haben.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PROJEKT LISTE -->
+  <section class="legal-section" id="projekte-liste">
+    <div class="container">
+
+      <!-- Filter -->
+      <div class="row mb-4">
+        <div class="col-12 d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start">
+          <button class="project-filter-btn active" type="button" data-filter="all">
+            Alle Projekte
+          </button>
+          <button class="project-filter-btn" type="button" data-filter="wohnung">
+            Wohnungen &amp; Häuser
+          </button>
+          <button class="project-filter-btn" type="button" data-filter="gewerbe">
+            Gewerbeflächen
+          </button>
+          <button class="project-filter-btn" type="button" data-filter="dach">
+            Dachausbau
+          </button>
+        </div>
+      </div>
+
+      <div class="row g-3 g-md-4 project-grid">
+
+        <div class="col-md-6 col-lg-4 project-item" data-category="wohnung">
+          <article class="project-card has-image h-100 d-flex flex-column">
+            <div class="project-image-wrapper">
+              <img src="./assets/img/projekt-wohnung.webp" alt="Modernisierung einer Stadtwohnung – Trockenbau, Decken und Dämmung" loading="lazy">
+              <div class="project-image-overlay">
+                <span>Innenausbau · Decken · Dämmung</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tag">Wohnungsausbau</div>
+              <h2 class="project-title">Modernisierung einer Stadtwohnung</h2>
+              <p class="project-desc mb-0">
+                Klare Raumaufteilung durch Trockenbauwände, abgehängte Decken und Wärmedämmung 
+                für mehr Komfort im Alltag.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 project-item" data-category="gewerbe">
+          <article class="project-card has-image h-100 d-flex flex-column">
+            <div class="project-image-wrapper">
+              <img src="./assets/img/projekt-buero.webp" alt="Büro- und Praxisräume mit Trennwänden und Akustiklösungen" loading="lazy">
+              <div class="project-image-overlay">
+                <span>Akustik · Trennwände · Gewerbe</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tag">Gewerbefläche</div>
+              <h2 class="project-title">Büro und Praxisräume</h2>
+              <p class="project-desc mb-0">
+                Flexible Raumaufteilung über Trockenbauwände, mit Fokus auf Akustik 
+                und eine effiziente Nutzung der Fläche.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 project-item" data-category="dach">
+          <article class="project-card has-image h-100 d-flex flex-column">
+            <div class="project-image-wrapper">
+              <img src="./assets/img/projekt-dachgeschoss.webp" alt="Dachgeschoss-Ausbau mit Dämmung und Trockenbau" loading="lazy">
+              <div class="project-image-overlay">
+                <span>Dachausbau · Dämmung · Ausbau</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tag">Dachausbau</div>
+              <h2 class="project-title">Dachgeschoss mit Isolierung</h2>
+              <p class="project-desc mb-0">
+                Kompletter Ausbau des Dachgeschosses inklusive Dämmung, Beplankung und 
+                Vorbereitung für weitere Gewerke.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Optional: më shumë karta nëse do t’i shtosh më vonë -->
+
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container py-5">
+    <div class="row gy-4 text-center text-md-start">
+      <div class="col-md-4 d-flex flex-column align-items-center align-items-md-start">
+        <div class="d-flex align-items-center gap-3 mb-3 justify-content-center justify-content-md-start">
+          <img src="./assets/img/logo.png" class="footer-logo" alt="SULI Group Logo">
+          <div class="footer-brand-text">
+            <div class="footer-brand-top">SULI GROUP</div>
+            <div class="footer-brand-bottom">TROCKENBAU</div>
+          </div>
+        </div>
+        <p class="footer-text">
+          SULI Group Trockenbau steht für saubere Ausführung, klare Absprachen
+          und zuverlässige Zusammenarbeit im Wohn und Gewerbebereich.
+        </p>
+      </div>
+
+      <div class="col-md-4 d-flex flex-column align-items-center align-items-md-start">
+        <h4 class="footer-title">Navigation</h4>
+        <ul class="footer-links text-center text-md-start">
+          <li><a href="index.html#start">Startseite</a></li>
+          <li><a href="dienstleistungen.html">Dienstleistungen</a></li>
+          <li><a href="projekte.html">Projekte</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 d-flex flex-column align-items-center align-items-md-start">
+        <h4 class="footer-title">Kontakt</h4>
+        <ul class="footer-info">
+          <li>
+            <i class="bi bi-telephone"></i>
+            <a href="tel:+491728994352">+49 172 899 4352</a>
+          </li>
+          <li>
+            <i class="bi bi-envelope"></i>
+            <a href="mailto:suli.group.1@gmail.com">suli.group.1@gmail.com</a>
+          </li>
+          <li>
+            <i class="bi bi-geo-alt"></i>
+            Flößaustraße 60, 90763 Fürth
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom py-3 px-4">
+    <div class="container">
+      <div class="row align-items-center text-center text-md-start">
+        <div class="col-12 col-md-6 mb-2 mb-md-0 d-flex justify-content-center justify-content-md-start">
+          <span>© <span id="year"></span> SULI Group Trockenbau – Alle Rechte vorbehalten</span>
+        </div>
+        <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
+          <div class="footer-legal-links">
+            <a href="/impressum.html">Impressum</a>
+            <span>·</span>
+            <a href="/datenschutz.html">Datenschutz</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button id="backToTop" class="back-to-top" type="button" aria-label="Nach oben scrollen">
+    <i class="bi bi-arrow-up-short" aria-hidden="true"></i>
+  </button>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const revealElements = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    revealElements.forEach((el) => observer.observe(el));
+
+    // Filter projekte
+    const filterButtons = document.querySelectorAll(".project-filter-btn");
+    const projectItems = document.querySelectorAll(".project-item");
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filter = btn.getAttribute("data-filter");
+        filterButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        projectItems.forEach((item) => {
+          const category = item.getAttribute("data-category");
+          if (filter === "all" || category === filter) {
+            item.classList.remove("d-none");
+          } else {
+            item.classList.add("d-none");
+          }
+        });
+      });
+    });
+
+    // Back to top
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) {
+        backToTop.classList.add("show");
+      } else {
+        backToTop.classList.remove("show");
+      }
+    });
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
