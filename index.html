@@ -64,7 +64,7 @@
           <a class="nav-link" href="kontakt.html">Kontakt</a>
         </li>
         <li class="nav-item mt-2 mt-lg-0">
-          <a href="kontakt.html" class="btn btn-gold btn-sm w-100 w-lg-auto">Projekt anfragen</a>
+          <a href="kontakt.html" class="btn btn-gold btn-sm w-100 w-md-auto">Projekt anfragen</a>
         </li>
       </ul>
     </div>
@@ -119,13 +119,13 @@
       </div>
 
       <!-- RIGHT -->
-      <div
-        class="col-lg-6 reveal d-flex justify-content-center"
-        data-reveal="right"
-      >
-        <div class="hero-card w-100" style="max-width: 500px;">
+<div class="col-lg-6 reveal d-flex justify-content-center" data-reveal="right">
+ 
+          <div class="hero-visual w-100 d-flex justify-content-center" style="max-width: 500px;">
 
-          <div class="d-flex justify-content-between mb-2 small text-secondary">
+                <div class="hero-card w-100">
+
+                            <div class="d-flex justify-content-between mb-2 small text-secondary">
             <span>SULI GROUP Trockenbau</span>
             <span>Wohn &amp; Gewerbeobjekte</span>
           </div>
@@ -170,6 +170,11 @@
             <div><i class="bi bi-dot"></i> Bodenverlegung &amp; Sanierung</div>
             <div><i class="bi bi-dot"></i> Dachausbau &amp; Isolierung</div>
           </div>
+ 
+    </div>
+
+
+
 
         </div>
       </div>
@@ -549,15 +554,15 @@ Erfahren Sie, wie Auftraggeber die Zusammenarbeit mit der SULI Group bewerten.
   <div class="row g-3 mb-1">
     <div class="col-md-6">
       <label class="form-label small text-secondary" for="name">Name</label>
-      <input type="text" id="name" class="form-control" placeholder="Ihr Name">
+      <input type="text" id="name" class="form-control" placeholder="Ihr Name" required>
     </div>
     <div class="col-md-6">
       <label class="form-label small text-secondary" for="email">E-Mail</label>
-      <input type="email" id="email" class="form-control" placeholder="Ihre E-Mail-Adresse">
+      <input type="email" id="email" class="form-control" placeholder="Ihre E-Mail-Adresse" required>
     </div>
     <div class="col-md-6">
       <label class="form-label small text-secondary" for="phone">Telefon</label>
-      <input type="tel" id="phone" class="form-control" placeholder="Für Rückfragen">
+      <input type="tel" id="phone" class="form-control" placeholder="Für Rückfragen" required>
     </div>
     <div class="col-md-6">
       <label class="form-label small text-secondary" for="type">Projektart</label>
@@ -572,14 +577,15 @@ Erfahren Sie, wie Auftraggeber die Zusammenarbeit mit der SULI Group bewerten.
 
   <div class="mb-3">
     <label class="form-label small text-secondary" for="message">Nachricht</label>
-    <textarea id="message" class="form-control" placeholder="Was darf umgesetzt werden?"></textarea>
+    <textarea id="message" class="form-control" placeholder="Was darf umgesetzt werden?" required></textarea>
   </div>
 
   <!-- Checkbox Datenschutz -->
   <div class="form-check mb-3 d-flex align-items-start">
     <input class="form-check-input mt-1" type="checkbox" id="privacy" required>
     <label class="form-check-label ms-2 small text-secondary" for="privacy">
-        Ich habe die <a href="datenschutz.html" class="text-decoration-none" style="color: #c7a96b;">Datenschutzerklärung</a> zur Kenntnis genommen.
+        Ich habe die <a href="datenschutz.html" class="text-decoration-none privacy-link">Datenschutzerklärung</a>
+ zur Kenntnis genommen.
 
     </label>
   </div>

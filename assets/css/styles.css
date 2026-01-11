@@ -1644,3 +1644,60 @@ textarea.form-control {
     font-size: 1.4rem;
   }
 }
+
+
+
+/* ===== FIX: Contact form labels were too faint (Bootstrap text-secondary) ===== */
+.contact-card form .form-label.text-secondary{
+  color: #cfcfcf !important;
+  opacity: 1 !important;
+}
+
+/* Label bëhet më i fortë kur fusha brenda kolonës ka fokus */
+.contact-card form .col-md-6:focus-within .form-label,
+.contact-card form .mb-3:focus-within .form-label{
+  color: #ffffff !important;
+}
+
+
+.contact-card form .form-control,
+.contact-card form .form-select,
+.contact-card form textarea.form-control{
+  opacity: 1 !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+.contact-card input:-webkit-autofill,
+.contact-card textarea:-webkit-autofill,
+.contact-card select:-webkit-autofill{
+  -webkit-text-fill-color: #ffffff !important;
+  transition: background-color 9999s ease-out 0s;
+  box-shadow: 0 0 0px 1000px #111111 inset !important;
+  border-color: var(--sg-gold) !important;
+}
+
+
+.contact-card .privacy-link{
+  color: var(--sg-gold);
+}
+
+.contact-card .privacy-link:hover{
+  text-decoration: underline;
+}
+
+.whatsapp-float{
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.footer-brand{
+  text-decoration: none;
+  color: inherit;
+}
+.footer-brand .brand-line-top,
+.footer-brand .brand-line-bottom{
+  text-decoration: none;
+}
+
