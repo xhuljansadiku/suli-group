@@ -619,6 +619,19 @@ Erfahren Sie, wie Auftraggeber die Zusammenarbeit mit der SULI Group bewerten.
 </div>
 
 
+<!-- WhatsApp Floating Button -->
+<a
+  href="https://wa.me/491728994352?text=Hallo%20SULI%20Group%2C%20ich%20h%C3%A4tte%20eine%20Frage%20zu%20einem%20Projekt."
+  class="whatsapp-float"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="WhatsApp Chat öffnen"
+  title="WhatsApp"
+>
+  <i class="bi bi-whatsapp" aria-hidden="true"></i>
+</a>
+
+
 </main>
 
 <!-- FOOTER -->
@@ -915,7 +928,25 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 </script>
 
+<script>
+  const waBtn = document.querySelector('.whatsapp-float');
+
+  window.addEventListener('scroll', () => {
+    if (!waBtn) return;
+
+    if (window.scrollY > 250) {
+      waBtn.style.opacity = '1';
+      waBtn.style.pointerEvents = 'auto';
+    } else {
+      waBtn.style.opacity = '0';
+      waBtn.style.pointerEvents = 'none';
+    }
+  });
+</script>
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 </html>
